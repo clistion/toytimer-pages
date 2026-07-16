@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exclusão de Conta e Dados - ToyTimer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --primary: #4f46e5;
+            --danger: #ef4444;
+            --danger-bg: #fef2f2;
+            --border: #e2e8f0;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #0f172a;
+                --card-bg: #1e293b;
+                --text-primary: #f8fafc;
+                --text-secondary: #94a3b8;
+                --primary: #6366f1;
+                --danger: #f87171;
+                --danger-bg: #451a1a;
+                --border: #334155;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 650px;
+            width: 100%;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .logo-placeholder {
+            font-size: 40px;
+            margin-bottom: 12px;
+            display: inline-block;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 16px;
+        }
+
+        .warning-box {
+            background-color: var(--danger-bg);
+            border: 1px solid var(--danger);
+            border-radius: 16px;
+            padding: 18px;
+            margin-bottom: 32px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .warning-icon {
+            font-size: 20px;
+            line-height: 1;
+        }
+
+        .warning-text {
+            color: var(--text-primary);
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .step-list {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+
+        .step-item {
+            position: relative;
+            padding-left: 48px;
+            margin-bottom: 20px;
+        }
+
+        .step-number {
+            position: absolute;
+            left: 0;
+            top: 2px;
+            width: 32px;
+            height: 32px;
+            background-color: var(--primary);
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .step-title {
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 4px;
+        }
+
+        .step-desc {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .info-section {
+            border-top: 1px solid var(--border);
+            padding-top: 24px;
+            margin-bottom: 32px;
+        }
+
+        .info-item {
+            margin-bottom: 16px;
+        }
+
+        .info-title {
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .info-desc {
+            color: var(--text-secondary);
+            font-size: 13px;
+        }
+
+        .footer {
+            text-align: center;
+            border-top: 1px solid var(--border);
+            padding-top: 24px;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .footer a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <div class="header">
+            <div class="logo-placeholder">⚙️</div>
+            <h1>Exclusão de Conta e Dados</h1>
+            <p class="subtitle">Saiba como remover suas informações do aplicativo ToyTimer</p>
+        </div>
+
+        <div class="warning-box">
+            <span class="warning-icon">⚠️</span>
+            <div class="warning-text">
+                <strong>Atenção:</strong> A exclusão de conta é permanente e irreversível. Os dados locais salvos no seu aparelho podem ser apagados com a simples desinstalação do aplicativo. Já para apagar os dados sincronizados com a nuvem, é necessário estar logado no aplicativo com a conta Google ou Apple que foi utilizada para salvá-los.
+            </div>
+        </div>
+
+        <h2>Como solicitar a exclusão de sua conta no app:</h2>
+        
+        <ul class="step-list">
+            <li class="step-item">
+                <div class="step-number">1</div>
+                <div class="step-title">Acesse os Ajustes</div>
+                <div class="step-desc">Abra o ToyTimer no seu celular. Certifique-se de estar logado no aplicativo com a mesma conta Google ou Apple usada para salvar os dados em nuvem, e acesse a opção <strong>Ajustes ⚙️</strong> no menu ou cabeçalho.</div>
+            </li>
+            <li class="step-item">
+                <div class="step-number">2</div>
+                <div class="step-title">Abra a Seção de Nuvem</div>
+                <div class="step-desc">Toque em <strong>Nuvem & Sincronização ☁️</strong> para expandir as opções da sua conta.</div>
+            </li>
+            <li class="step-item">
+                <div class="step-number">3</div>
+                <div class="step-title">Solicite a Exclusão</div>
+                <div class="step-desc">Toque no botão vermelho <strong>Excluir Conta e Dados da Nuvem ⚠️</strong>.</div>
+            </li>
+            <li class="step-item">
+                <div class="step-number">4</div>
+                <div class="step-title">Confirme após 10 Segundos</div>
+                <div class="step-desc">Aguarde o contador de segurança de 10 segundos finalizar no modal de aviso e toque em <strong>Sim, Excluir Tudo</strong> para confirmar.</div>
+            </li>
+        </ul>
+
+        <div class="info-section">
+            <h2>Dados que serão excluídos:</h2>
+            <div class="info-item">
+                <div class="info-title">Dados de Cadastro e Autenticação</div>
+                <div class="info-desc">Seu perfil de usuário, e-mail associado, tokens de autenticação de provedores externos (como Google e Apple).</div>
+            </div>
+            <div class="info-item">
+                <div class="info-title">Histórico de Locações</div>
+                <div class="info-desc">Todos os registros e dados salvos sobre os aluguéis de brinquedos.</div>
+            </div>
+            <div class="info-item">
+                <div class="info-title">Cadastro de Brinquedos</div>
+                <div class="info-desc">Todos os brinquedos registrados por você, bem como suas respectivas fotos armazenadas nos servidores.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
